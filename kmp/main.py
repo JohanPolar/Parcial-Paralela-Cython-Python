@@ -50,7 +50,7 @@ for i in range (len(texts)):
     #print("Patrón -> {}\nCarga ->{}".format(text,pattern))
 
     with open(f"kmp{i}.csv","a") as archivo:
-        archivo.write("python, cython\n")
+        archivo.write("Python,Cython\n")
 
     for j in range(iteraciones):
         init_time=time.time()
