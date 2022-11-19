@@ -12,7 +12,13 @@ import time
 
 iteraciones = 30
 
-cargas = [random.sample(range(0,1000),300),random.sample(range(0,1000),600),random.sample(range(0,1000),900)]
+carga1 = 500
+carga2 = 1000
+carga3 = 1500
+
+range_gen = 1000
+
+cargas = [random.sample(range(0,carga1+range_gen),carga1),random.sample(range(0,carga2+range_gen),carga2),random.sample(range(0,carga3+range_gen),carga3)]
 
 print_format = "{:.5f},{:.5f}\n"
 
@@ -21,7 +27,7 @@ for i in range (len(cargas)):
     f = open(f"triplete{i}.csv","w")
     f.truncate()
     f.close()
-
+ 
     carga = cargas[i]
 
     with open(f"triplete{i}.csv","a") as archivo:
